@@ -1,0 +1,24 @@
+body{
+    width: 80%;
+    margin: auto!important;
+}
+
+.btn-primary{
+    background-color: var(--color-2)!important;
+}
+
+.btn-secondary{
+    background-color: var(--color-3)!important;
+}
+
+.form-login{
+    background-color: aliceblue;
+    margin: auto;
+    width: 80%;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    color: var(--color-1);
+
+}
+
