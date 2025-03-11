@@ -34,7 +34,7 @@ const AddGenre = () => {
     e.preventDefault();
       // console.log("Editando");
       try{
-        const res = await axios.post(`https://nodejs-api-o7k7.onrender.com/genresx`, genre, {
+        const res = await axios.post(`https://nodejs-api-o7k7.onrender.com/genres`, genre, {
           headers: { 'Authorization': `Bearer ${auth}` },
         });
         console.log('Género agregado: ', res.data);
