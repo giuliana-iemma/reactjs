@@ -15,6 +15,7 @@ export {Genres} from "./Genres/Genres"
 export {ViewGenre} from "./Genres/ViewGenre"
 export {EditGenre} from "./Genres/EditGenre"
 export {DeleteGenre} from "./Genres/DeleteGenre"
+export {AddGenre} from "./Genres/AddGenre"
 
 
 /* Users */

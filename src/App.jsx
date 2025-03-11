@@ -1,6 +1,6 @@
   import { Route, Routes } from 'react-router-dom'
 import './App.css'
-import { Home, Movies, FormLogin, FormRegister, DeleteMovie, ViewMovie, EditMovie, AddMovie, Genres, ViewGenre, EditGenre, DeleteGenre, Users, EditUser } from './pages'
+import { Home, Movies, FormLogin, FormRegister, DeleteMovie, ViewMovie, EditMovie, AddMovie, Genres, ViewGenre, EditGenre, DeleteGenre, AddGenre, Users, EditUser } from './pages'
 import {Navbar} from './components/Navbar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -23,6 +23,7 @@ function App() {
       <Route path="/genres" element={<Genres/>} />
       <Route path="/genres/:id" element={<ViewGenre/>} />
       <Route path="/genres/:id/edit" element={<EditGenre/>} />
+      <Route path="/genres/add" element={<AddGenre/>} />
 
       <Route path="/users" element={<Users/>} />
       <Route path="/users/:id/edit" element={<EditUser/>} />

@@ -60,7 +60,7 @@ const Genres = () => {
     {auth && role === "admin" && (
      <>
      <h4 className='mt-3'>Funciones de administrador</h4>
-     {/* <Link className='btn btn-primary' to={`/genres/add`}>Agregar nueva género</Link> */}
+     <Link className='btn btn-primary' to={`/genres/add`}>Agregar nueva género</Link>
      </>
    )}
 
