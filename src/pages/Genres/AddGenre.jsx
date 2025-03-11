@@ -17,22 +17,6 @@ const AddGenre = () => {
       description: "",
   })
   
-  const fetchGenreDetails = async () => {
-      try{
-         const res =  await axios.get(`http://localhost:3000/genres/${id}`, {
-              headers: { 'Authorization': `Bearer ${auth}` },
-            });
-          // console.log("DATA: ", res.data);
-          setGenre(res.data)
-      } catch (err) {
-          console.log(err)
-      }
-  }
-
-  useEffect(() => {
-      fetchGenreDetails()
-  }, [id])
-
   // Manejar cambios en los campos del formulario
   const handleChange = (e) => {
     //e contiene toda la información del campo. Lo desestructuramos para extraer name y value
@@ -46,14 +30,14 @@ const AddGenre = () => {
     console.log(e.target)
   };
 
-    const handleEdit = async (e) =>{
+    const handleAdd = async (e) =>{
     e.preventDefault();
       // console.log("Editando");
       try{
-        const res = await axios.put(`http://localhost:3000/genres/${id}`, genre, {
+        const res = await axios.post(`https://nodejs-api-o7k7.onrender.com/genresx`, genre, {
           headers: { 'Authorization': `Bearer ${auth}` },
         });
-        console.log('Género actualizado: ', res.data);
+        console.log('Género agregado: ', res.data);
         navigate('/genres')
       }catch (err){
         console.log(err)
@@ -65,9 +49,9 @@ const AddGenre = () => {
   }
 return (
   <>
-   <h1>Editando {genre.name}</h1>
+   <h1>Agregar nuevo género</h1>
 
-    <form onSubmit={handleEdit}> 
+    <form onSubmit={handleAdd}> 
         {/* Title */}
         <div>
             <label className='form-label'>Género</label>
@@ -85,7 +69,7 @@ return (
           />
         </div>
 
-        <button type='submit' onClick={handleEdit} className='btn btn-primary mt-5'>Guardar</button>
+        <button type='submit' onClick={handleAdd} className='btn btn-primary mt-5'>Guardar</button>
     </form>
   </>
  
