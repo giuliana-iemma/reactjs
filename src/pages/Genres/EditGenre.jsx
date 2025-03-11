@@ -19,7 +19,7 @@ const EditGenre = () => {
   
   const fetchGenreDetails = async () => {
       try{
-         const res =  await axios.get(`https://nodejs-api-o7k7.onrender.com/${id}`, {
+         const res =  await axios.get(`https://nodejs-api-o7k7.onrender.com/genres/${id}`, {
               headers: { 'Authorization': `Bearer ${auth}` },
             });
           // console.log("DATA: ", res.data);
