@@ -14,7 +14,7 @@ const Movies = () => {
 
   const fetchMovies = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/movies', {
+      const res = await axios.get('https://nodejs-api-o7k7.onrender.com/movies', {
         headers: { 'Authorization': `Bearer ${auth}` },
       });
 
@@ -37,7 +37,7 @@ const Movies = () => {
     console.log('Borrar', movieId)
 
     try{
-      const res = await axios.delete(`http://localhost:3000/movies/${movieId}`, {
+      const res = await axios.delete(`https://nodejs-api-o7k7.onrender.com/movies/${movieId}`, {
         headers: { 'Authorization': `Bearer ${auth}` },
       });
 

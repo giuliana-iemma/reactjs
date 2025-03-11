@@ -27,7 +27,7 @@ const EditMovie = () => {
 
   const fetchMovieDetails = async () => {
       try{
-         const res =  await axios.get(`http://localhost:3000/movies/${id}`, {
+         const res =  await axios.get(`https://nodejs-api-o7k7.onrender.com/movies/${id}`, {
               headers: { 'Authorization': `Bearer ${auth}` },
             });
           // console.log("DATA: ", res.data);
@@ -61,7 +61,7 @@ const EditMovie = () => {
     e.preventDefault();
       // console.log("Editando");
       try{
-        const res = await axios.put(`http://localhost:3000/movies/${id}`, movie, {
+        const res = await axios.put(`https://nodejs-api-o7k7.onrender.com/movies/${id}`, movie, {
           headers: { 'Authorization': `Bearer ${auth}` },
         });
         console.log('Peli actualizada: ', res.data);

@@ -100,7 +100,7 @@ const handleAddMovie = async (e) =>{
     e.preventDefault();
       
     try{
-        const res = await axios.post(`http://localhost:3000/movies`, movie, {
+        const res = await axios.post(`https://nodejs-api-o7k7.onrender.com/movies`, movie, {
           headers: { 'Authorization': `Bearer ${auth}` },
         });
         navigate('/movies');

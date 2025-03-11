@@ -16,7 +16,7 @@ const Genres = () => {
 
   const fetchGenres = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/genres', {
+      const res = await axios.get('https://nodejs-api-o7k7.onrender.com/genres', {
         headers: {'Authorization': `Bearer ${auth}`}, 
       });
 
@@ -43,7 +43,7 @@ const Genres = () => {
     console.log('Borrar', genreId);
 
     try{
-       const res = await axios.delete(`http://localhost:3000/genres/${genreId}`, {
+       const res = await axios.delete(`https://nodejs-api-o7k7.onrender.com/genres/${genreId}`, {
               headers: { 'Authorization': `Bearer ${auth}` },
             });
 
@@ -60,7 +60,7 @@ const Genres = () => {
     {auth && role === "admin" && (
      <>
      <h4 className='mt-3'>Funciones de administrador</h4>
-     {/* <Link className='btn btn-primary' to={`/genres/add`}>Agregar nueva película</Link> */}
+     {/* <Link className='btn btn-primary' to={`/genres/add`}>Agregar nueva género</Link> */}
      </>
    )}
 

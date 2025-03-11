@@ -65,7 +65,7 @@
 
                 try {
                     // console.log("Logeado")
-                    const res = await axios.post('http://localhost:3000/login',  { email, password });
+                    const res = await axios.post('https://nodejs-api-o7k7.onrender.com/login',  { email, password });
     
                     console.log("RES: " , res.data);
     

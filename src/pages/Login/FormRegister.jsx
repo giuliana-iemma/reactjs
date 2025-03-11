@@ -109,7 +109,7 @@ const FormRegister = () => {
 
         if (Object.keys(validationErrors).length === 0) {
             try{
-                const res = await axios.post ('http://localhost:3000/users', {
+                const res = await axios.post ('https://nodejs-api-o7k7.onrender.com/users', {
                     name, lastname, email, password, role
                 });
     

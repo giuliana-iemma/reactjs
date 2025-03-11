@@ -14,7 +14,7 @@ const Users = () => {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/users', {
+      const res = await axios.get('https://nodejs-api-o7k7.onrender.com/users', {
         headers: { 'Authorization': `Bearer ${auth}` },
       });
 
@@ -37,7 +37,7 @@ const Users = () => {
     console.log('Borrar', userId)
 
     try{
-      const res = await axios.delete(`http://localhost:3000/users/${userId}`, {
+      const res = await axios.delete(`https://nodejs-api-o7k7.onrender.com/users/${userId}`, {
         headers: { 'Authorization': `Bearer ${auth}` },
       });
 

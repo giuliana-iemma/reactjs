@@ -23,7 +23,7 @@ const ViewMovie = () => {
     
     const fetchMovieDetails = async () => {
         try{
-           const res =  await axios.get(`http://localhost:3000/movies/${id}`, {
+           const res =  await axios.get(`https://nodejs-api-o7k7.onrender.com/movies/${id}`, {
                 headers: { 'Authorization': `Bearer ${auth}` },
               });
             console.log("DATA: ", res.data);
